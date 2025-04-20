@@ -1,0 +1,17 @@
+jupyter
+python-dotenv
+google.generativeai
+langchain_google_genai
+langchain
+langchain_community
+faiss-cpu
+pdfplumber
+gspread
+PyPDFLoader
+langchain_openai
+fitz
+json
+vision_v1
+pandas
+fuzzywuzzy
+ace_tools
