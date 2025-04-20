@@ -130,6 +130,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+dss740_ml_env
 env/
 venv/
 ENV/
