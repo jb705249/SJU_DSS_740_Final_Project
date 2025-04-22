@@ -1,0 +1,10 @@
+column,change,rationale
+age,Removed 3 row(s) where age > 125,Oldest verified human lived to be 122; values above 125 are likely errors or outliers.
+loan_status,Dropped loan_status column,Target variable for classification; not needed in cleaned dataset.
+person_income,"Capped person_income at $3,000,000 and applied log1p transformation",Handled extreme right skew and outliers in income distribution; log1p applied to normalize values and removed person_income for modeling.
+loan_amnt,Applied log1p transformation to loan_amount,Handled extreme right skew and outliers in loan amount distribution; log1p applied to normalize values.
+person_emp_exp,Removed 5 row(s) where person_emp_exp > 70,Unrealistic employment experience; values above 70 years are likely errors or outliers.
+numerical_columns,Scaled numerical columns using MinMaxScaler,"Normalized numerical features to a range of [0, 1] for better model performance."
+"['person_gender', 'person_education', 'person_home_ownership', 'loan_intent', 'previous_loan_defaults_on_file']","Removed 117 row(s) containing ""unknown"" values","""unknown"" adds noise and uncertainty in modeling categorical variables"
+"['person_gender', 'person_education', 'person_home_ownership', 'loan_intent', 'previous_loan_defaults_on_file']",Applied one-hot encoding (drop_first=True),Converted categorical variables into binary indicators for model compatibility.
+loan_status,Readded loan_status column,Target variable for classification; readded after cleaning and preprocessing.
